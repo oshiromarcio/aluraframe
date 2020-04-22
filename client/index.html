@@ -58,6 +58,19 @@
         <tfoot>
         </tfoot>
     </table>
-    
+    <script src="js/app/models/Negociacao.js"></script>
+    <script>
+
+        let hoje = new Date();
+        let n1 = new Negociacao(hoje, 10, 200.50);
+        console.log(Object.isFrozen(n1));
+        console.log("Data", n1.data);
+        console.log("Quantidade", n1.quantidade);
+        console.log("Valor", n1.valor);
+        console.log("Volume", n1.volume);
+
+        hoje.setDate(11);
+        console.log(n1.data);
+    </script>
 </body>
 </html>
